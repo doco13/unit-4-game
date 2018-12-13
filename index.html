@@ -3,17 +3,29 @@
 
 <head>
     <meta charset="utf-8" />
-    <title>Kriptonite</title>
+    <title>Crystals Game</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <!-- <link rel="stylesheet" type="text/css" href="assets/css/reset.css" /> -->
-    <link rel="stylesheet" type="text/css" href="assets/css/style.css" />
-
-    <!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
+    <!-- Reset Css link -->
+    <!-- <link rel="stylesheet" type="text/css" href="assets/css/reset.css"/> -->
+    <!-- Bootstrap link -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
         crossorigin="anonymous">
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
-        crossorigin="anonymous"></script> -->
-
-    <script src="assets/javascript/game.js"></script>
+    <!--link to CSS  -->
+    <link rel="stylesheet" type="text/css" href="assets/css/style.css" />
+    <!-- Font Awesome link -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+    <!-- link to JQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script> 
+    
+    <style type="text/css">
+        .crystal-image {
+            width: 150px;
+            height: 150px;
+            margin-left: 15px;
+            padding: 0%
+            
+        }
+    </style>
 </head>
 
 <body>
@@ -24,107 +36,78 @@
         </h1>
     </header>
 
-    <div class="container">
-        <div class="instructions">
-            <p>
-                You will be given a random number at the start of the game.
-            </p>
-            <p>
-                There are four crystal below. By clicking on a crystal you will add a specifif amount of points to your
-                score.
-            </p>
-            <p>
-                You win the game by matching your total score to random number, you lose the game if your total score
-                goes above the random number.
-            </p>
-            <p>
-                The value of each crystal is hidden from you until you click on it.
-            </p>
-            <p>
-                Each time when the game starts, the game will change the values of each crystal.
-            </p>
-        </div>
-
-        <div class="initial-numbers">
-            <div id="random-number">o</div>
-
-            <div id="tracker">
-                <p id="wins">
-                    Wins:
+ 
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-12 col-md-12 text-center py-5" id="instructions">
+                <p>
+                    You will be given a random number at the start of the game.
                 </p>
-                <p id="losses">
-                    Losses:
+                <p>
+                    There are four crystals below. By clicking on a crystal you will add a specific amount of points to
+                    your
+                    score.
+                </p>
+                <p>
+                    You win the game by matching your total score to the random number, you lose the game if your total
+                    score
+                    goes above the random number.
+                </p>
+                <p>
+                    The value of each crystal is hidden from you until you click on it.
+                </p>
+                <p>
+                    Each time when the game starts, the game will change the values of each crystal.
                 </p>
             </div>
         </div>
 
-        <div class="crystals">
-            <button id="cr1">
-                <img src="assets/images/cr1.PNG">
-            </button>
-            <button id="cr2">
-                <img src="assets/images/cr2.PNG">
-            </button>
-            <button id="cr3">
-                <img src="assets/images/cr3.PNG">
-            </button>
-            <button id="cr4">
-                <img src="assets/images/cr4.PNG">
-            </button>
+        <div class="row">
+            <div class="col-12 col-md-4 text-center py-2" id="third-row">
+                <h3>
+                    Number to guess: <span id="number-to-guess"></span>
+                </h3>
+            </div>
+            <div class="col-12 col-md-4 text-center py-2">
+                <h3>
+                    Wins: <span id="wins">0</span>
+                </h3>
+            </div>
+            <div class="col-12 col-md-4 text-center py-2">
+                <h3>
+                    Losses: <span id="losses">0</span>
+                </h3>
+            </div>
+
         </div>
 
-        <div class="score">
-            <h3>
-                Your total score is:
-            </h3>
-            <div id="user-score">0</div>
+        <!-- This is the Div containing the images -->
+
+        <div class="row">
+            <div class="col-12 col-md-12 text-center py-5" id="crystals">
+            </div>
         </div>
 
-
-
-
+        <div class="row">
+            <div class="col-12 col-md-12 text-center py-2" id="user-count">
+                <h2>
+                    Your total score is: <span id="score"></span>
+                </h2>
+            </div>
+        </div>
+        <!-- Class for the button -->
+        <div class="row">
+        <div class="col-12 col-md-12 text-center my-10">
+               
+                <button id="new-game-button">
+                    <i class="fas fa-gamepad"></i>
+                    Start A New Game
+                </button>
+        </div>
 
     </div>
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+    <!-- JavaScript link -->
     <script src="assets/javascript/game.js"></script>
 
 </body>

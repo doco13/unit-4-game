@@ -3,107 +3,74 @@
 body {
     background-image: url("../images/bg.png");
     background-repeat: repeat;
+    max-width: 960px;
+    margin: auto;
 }
 
 /* Some styling for the header  */
 
 header {
     background: #ff8000;
-    width: 22%;
+    width: 100%;
     text-align: center;
     color: white;
     padding: 5px 0 5px 0;
-    margin-bottom: 10px;
+    margin: 15px 0 10px 0;
+   
 }   
 
 /* Some styling for the instructions section */
 
-.instructions {
+#instructions {
     background:#fff2e6;
-    width: 50%;
+    width: 100%;
     font-size: 20px;
     font-weight: bold;
     color:green;
-    padding: 8px 0 8px 0;
-    margin-bottom: 10px;
+    padding: 5px 0 5px 0;
+    margin-bottom: 10px;    
 }
-
-/* Some styling for the initial-number class */
-#random-number {
-    background: #00cc99;
-    width: 20%;
-    font-size: 50px;
-    font-weight: bold;
-    height: 120px;
-    float: left;
-}
-
-#tracker {
-    background: #66ffff; 
-    width: 8%;
-    font-size: 20px;    
-    float: left;
-    padding: 0 0 15px 0;
-    margin-left: 10px;
-}
-
-/* .clearfix::after {
-    content: "";
-    clear: both;
-    display: table;
-} */
-
-/* Positioning the crystal in this section */
-
-.crystals {
-    position: relative;     
-}
-
-#cr1 {
-    position: absolute;
-    left: 0px;
-    top: 130px;    
-}
-
-#cr2 {
-    position: absolute;
-    left: 100px;
-    top: 130px;   
-}
-
-#cr3 {
-    position: absolute;
-    left: 200px;
-    top: 130px;     
-}
-
-#cr4 {
-    position: absolute;
-    left: 300px;
-    top: 130px;     
-}
-
-/* Positioning the score class */
 
 h3 {
-    position: absolute;
-    top: 638px;
-    left:8px;
-    background: #009999;
-    width: 20%;
-    color: white;
-    padding: 3px 0 3px 0;
+    background: #00cc99;   
+    height: 60px;
+    padding: 10px 0;    
 }
 
-#user-score {
-    position: absolute;
-    top: 695px;
-    left:8px;
-    background: #009999;
-    width: 20%;
-    height: 120px;
-    color: white;
-    margin-bottom: 20px;
-    font-size: 38px;
+/* Some styling for the crystals */
+
+#crystals {    
+    width: 100%;     
+    margin-bottom: 10px;   
+    background:#fff2e6;
+}
+
+/* Some styling for the User count */
+
+#user-count {
+    width: 100%;  
+    padding: 8px 0 8px 0;
+    margin-bottom: 10px;    
+    background:#fff2e6;
+}
+
+/* Some styling for the button to start a new game  */
+
+#new-game-button {
+    position: relative;
+    left: 32%;
+    outline: none;
+    border: none;
+    cursor: pointer;
+    display: block;
+    background-color: #ff8000;    
+    font-size: 22px;
     font-weight: bold;
+    color: white;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    padding: 25px;
+    border-radius: 20px;
+    box-shadow: 0 6px #5f5f5e;
+    margin-bottom: 20px;
 }
